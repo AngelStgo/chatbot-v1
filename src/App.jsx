@@ -47,7 +47,7 @@ function App() {
               return (
                 <div key={idx} className="flex items-center mb-5">
                   {message.role === "user" ? <CiUser size={24}/> : <LuBot size={24}/>}
-                  <div className="ml-2">{message.content}</div>
+                  <div className="ml-2 font-mono">{message.content}</div>
                 </div>
               );
             })}
@@ -62,7 +62,7 @@ function App() {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
           />
-          <input type="submit" className="ml-2 border p-1" />
+          <input type="submit" className="ml-2 border p-1 bg-indigo-500 shadow-lg shadow-indigo-500/50" />
         </form>
       </section>
     </main>
